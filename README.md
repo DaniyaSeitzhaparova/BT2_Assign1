@@ -18,7 +18,7 @@ CRYPTONEWS_API_URL=https://newsapi.org/v2/everything
 CRYPTONEWS_API_KEY=your_news_api_key_here
 
 
-📦 Run the Project
+
 
 
 # Clone the repository
@@ -37,7 +37,9 @@ API Example: http://127.0.0.1:8080/api/bitcoin
 
 ![image](https://github.com/user-attachments/assets/ebf56702-90a6-40a0-a109-23fffb5bb986)
 
-# Examples
+# Example
+
+![image](https://github.com/user-attachments/assets/dacca2b0-36bf-4a94-983a-f11a0977344e)
 
 
 📄 License
