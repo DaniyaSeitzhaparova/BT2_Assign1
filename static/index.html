@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crypto News Aggregator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🪙 Crypto News Aggregator</h1>
+    <input type="text" id="cryptoInput" placeholder="Enter crypto (e.g., bitcoin)" />
+    <button onclick="fetchCrypto()">Search</button>
+
+    <div id="output"></div>
+  </div>
+
+  <script>
+    async function fetchCrypto() {
+      const name = document.getElementById("cryptoInput").value;
+      const res = await fetch(`/api/${name}`);
+      const data = await res.json();
+
+      let html = "";
+      if (data.coin) {
+        html += `<h2>${data.coin.name} (${data.coin.symbol.toUpperCase()})</h2>`;
+        html += `<p>Price: $${data.coin.price_usd.toFixed(2)}</p>`;
+      }
+
+      html += `<h3>📰 Latest News</h3>`;
+      data.news.forEach(article => {
+        html += `
+          <div class="article">
+            <h4><a href="${article.url}" target="_blank">${article.title}</a></h4>
+            <p><strong>${article.source}</strong> | ${article.date}</p>
+            <p>${article.summary}</p>
+          </div>
+        `;
+      });
+
+      document.getElementById("output").innerHTML = html;
+    }
+  </script>
+</body>
+</html>

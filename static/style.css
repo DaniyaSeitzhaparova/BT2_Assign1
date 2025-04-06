@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+  }
+  .container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ccc;
+  }
+  input {
+    padding: 10px;
+    width: 70%;
+  }
+  button {
+    padding: 10px;
+  }
+  .article {
+    margin-top: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
